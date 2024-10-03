@@ -27,34 +27,24 @@ The data was downloaded by first clicking on "Historical Data," selecting the de
   
 - **Tesla Roadster Depreciation Data**: The depreciation data for luxury electric vehicles was sourced from industry-leading platforms, [**Kelley Blue Book**](https://www.kbb.com) and [**Edmunds**](https://www.edmunds.com), both recognized for their accuracy and reliability. To ensure consistency, the data was cross-referenced between the two platforms. It was then applied to a standard depreciation model for luxury electric vehicles in R studio. 
 
-#### Variables Description 
+#### Data Description 
 
-- **Date**: Represents the specific date on which the stock price was recorded or the valuation of the Tesla Roadster was determined.
+The dataset consists of the following key variables:
 
-- **Adj_Close**: The adjusted closing price of Tesla stock, which factors in corporate actions such as stock splits and dividends.
+- **Date**: The recorded date of Tesla's stock price or the Tesla Roadster's valuation.
 
-- **Investment_Value**: The fluctuating value of a $109,000 investment, which is calculated either based on Tesla's stock price or the annual depreciation of the Tesla Roadster.
+- **Adj_Close**: The adjusted closing price of Tesla stock, accounting for corporate actions like stock splits or dividends.
 
-- **Shares_Purchased**: Indicates the number of Tesla shares that could be acquired with an initial investment of $109,000 made in 2010.
+- **Investment_Value**: The changing value of a $109,000 investment in Tesla stock or the depreciation of the Tesla Roadster over time.
+
+- **Shares_Purchased**: The number of Tesla shares that could be bought with $109,000 in 2010.
 
 #### Details of Work Done
 
 1. **Stock Investment Calculation**:  
-   - The adjusted closing price of Tesla stock on June 30, 2010, was used to determine the number of shares that could be purchased with the initial $109,000. This amounted to approximately 28,385 shares. The value of this investment was then calculated annually based on the adjusted closing prices for each year, illustrating the exponential growth in value over the 14-year period (see @fig-tesla-stock).
 
-2. **Depreciation Calculation for Tesla Roadster**:  
-   - The Roadster’s initial purchase price of $109,000 in 2010 was subject to a 20% depreciation in the first year, followed by a 10% annual depreciation over the next four years. After this period, the depreciation slowed to 5% per year. By 2020, the car's value began to stabilize, showing a typical depreciation pattern for luxury vehicles over time (see @tbl-roadster).
-
-### Key Results
-
-***Tesla Stock Investment***
-
-A $109,000 investment in Tesla stock on June 30, 2010, at an adjusted price of $3.84 per share, would have secured approximately 28,385 shares. By June 30, 2024, this investment would have soared in value to $14.39 million, reflecting a staggering return of over 13,000%. Tesla's meteoric rise from a niche automaker to a global leader in electric vehicles and clean energy illustrates the immense financial rewards of investing early in innovative companies. This 13,000% return underscores the transformative potential of long-term investment strategies, where patience and belief in disruptive technology can result in extraordinary financial gains, as illustrated in @fig-tesla-stock.
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-#| label: fig-tesla-stock
-#| fig-cap: This graph shows the exponential growth of a $109,000 investment in Tesla stock, reaching $14.39 million by 2024, highlighting significant returns over 14 years.
-
+- The adjusted closing price of Tesla stock on June 30, 2010, was used to determine the number of shares that could be purchased with the initial $109,000. This amounted to approximately 28,385 shares. The value of this investment was then calculated annually based on the adjusted closing prices for each year, illustrating the exponential growth in value over the 14-year period (see @fig-tesla-stock).
+```{r message=FALSE, warning=FALSE}
 # Load necessary libraries
 library(ggplot2)
 library(dplyr)
@@ -83,38 +73,14 @@ shares_purchased <- initial_investment / initial_price
 tesla_data <- tesla_data %>% 
   mutate(Investment_Value = shares_purchased * Adj_Close)
 
-# Enhanced plot for Tesla Stock Investment with labels for selected years
-ggplot(tesla_data, aes(x = Date, y = Investment_Value)) +
-  geom_line(color = "#0073C2FF", linewidth = 1.5) +  # Use a refined blue color and thicker line
-  geom_point(size = 5, color = "#FF5733", shape = 21, fill = "#FF5733") +  # Use a refined orange color for points
-  geom_text(aes(label = scales::comma(Investment_Value)), 
-            vjust = -1.2, hjust = 0.5, size = 3.5, color = "black", fontface = "bold") +  # Slightly adjusted text size
-  scale_x_date(date_labels = "%Y", breaks = "5 year", limits = c(as.Date("2008-01-01"), as.Date("2026-12-31"))) +
-  scale_y_continuous(labels = comma, limits = c(0, 20000000)) +  # Set y-axis limit to 20 million
-  labs(title = "Tesla Stock Investment Value on June 30th (2010-2024)",
-       y = "Investment Value (in USD)",
-       x = "Year") +
-  theme_bw(base_size = 12) +  # Use a minimal theme with base font size 12
-  theme(
-    plot.title = element_text(size = 12, face = "bold", hjust = 0.5, color = "#2C3E50"),  # Adjusted title size
-    axis.title = element_text(size = 10, face = "bold", color = "#2C3E50"),  # Darker axis titles
-    axis.text = element_text(size = 10, color = "#2C3E50"),  # Darker axis text
-    panel.grid.major = element_line(color = "gray85", linetype = "dashed"),  # Softer gridlines
-    panel.grid.minor = element_blank(),  # Remove minor gridlines
-    plot.margin = margin(20, 20, 20, 20)  # Add a bit more margin for breathing space
-  )
-
 ```
+   
 
+2. **Depreciation Calculation for Tesla Roadster**:  
 
-***Tesla Roadster Investment***
+- The Roadster’s initial purchase price of $109,000 in 2010 was subject to a 20% depreciation in the first year, followed by a 10% annual depreciation over the next four years. After this period, the depreciation slowed to 5% per year. By 2020, the car's value began to stabilize, showing a typical depreciation pattern for luxury vehicles over time (see @tbl-roadster).
 
-In contrast, the Tesla Roadster, purchased for $109,000 in 2010, followed a typical luxury car depreciation curve. It lost 20% of its value in the first year, 10% annually for the next four years, and then depreciated at a slower rate of 5% per year. By 2024, the Roadster's value had dropped to under $40,000, representing a decline of over 63% from its original price, as illustrated in @tbl-roadster. While the Roadster was a symbol of technological innovation, its financial performance exemplifies the inevitable depreciation of luxury vehicles. This stark contrast highlights the significant disparity in wealth accumulation between an appreciating asset like Tesla stock and a depreciating asset like the car.
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-#| label: tbl-roadster
-#| tbl-cap: This graph illustrates the depreciation of the Tesla Roadster from its initial value of $109,000 in 2010 to $44,269 by 2024, showing a steady decline in value over time.
-
+```{r message=FALSE, warning=FALSE}
 # Initial investment in Tesla Roadster
 initial_investment <- 109000
 
@@ -157,6 +123,50 @@ roadster_data <- data.frame(
 # Highlight specific points for 2010, 2015, 2020, and 2024
 highlighted_points <- roadster_data %>% 
   filter(Date %in% as.Date(c("2010-06-30", "2015-06-30", "2020-06-30", "2024-07-01")))
+```
+
+
+### Key Results
+
+***Tesla Stock Investment***
+
+A $109,000 investment in Tesla stock on June 30, 2010, at an adjusted price of $3.84 per share, would have secured approximately 28,385 shares. By June 30, 2024, this investment would have soared in value to $14.39 million, reflecting a staggering return of over 13,000%. Tesla's meteoric rise from a niche automaker to a global leader in electric vehicles and clean energy illustrates the immense financial rewards of investing early in innovative companies. This 13,000% return underscores the transformative potential of long-term investment strategies, where patience and belief in disruptive technology can result in extraordinary financial gains, as illustrated in @fig-tesla-stock.
+
+```{r message=FALSE, warning=FALSE}
+#| label: fig-tesla-stock
+#| fig-cap: This graph shows the exponential growth of a $109,000 investment in Tesla stock, reaching $14.39 million by 2024, highlighting significant returns over 14 years.
+
+# Enhanced plot for Tesla Stock Investment with labels for selected years
+ggplot(tesla_data, aes(x = Date, y = Investment_Value)) +
+  geom_line(color = "#0073C2FF", linewidth = 1.5) +  # Use a refined blue color and thicker line
+  geom_point(size = 5, color = "#FF5733", shape = 21, fill = "#FF5733") +  # Use a refined orange color for points
+  geom_text(aes(label = scales::comma(Investment_Value)), 
+            vjust = -1.2, hjust = 0.5, size = 3.5, color = "black", fontface = "bold") +  # Slightly adjusted text size
+  scale_x_date(date_labels = "%Y", breaks = "5 year", limits = c(as.Date("2008-01-01"), as.Date("2026-12-31"))) +
+  scale_y_continuous(labels = comma, limits = c(0, 20000000)) +  # Set y-axis limit to 20 million
+  labs(title = "Tesla Stock Investment Value on June 30th (2010-2024)",
+       y = "Investment Value (in USD)",
+       x = "Year") +
+  theme_bw(base_size = 12) +  # Use a minimal theme with base font size 12
+  theme(
+    plot.title = element_text(size = 12, face = "bold", hjust = 0.5, color = "#2C3E50"),  # Adjusted title size
+    axis.title = element_text(size = 10, face = "bold", color = "#2C3E50"),  # Darker axis titles
+    axis.text = element_text(size = 10, color = "#2C3E50"),  # Darker axis text
+    panel.grid.major = element_line(color = "gray85", linetype = "dashed"),  # Softer gridlines
+    panel.grid.minor = element_blank(),  # Remove minor gridlines
+    plot.margin = margin(20, 20, 20, 20)  # Add a bit more margin for breathing space
+  )
+
+```
+
+
+***Tesla Roadster Investment***
+
+In contrast, the Tesla Roadster, purchased for $109,000 in 2010, followed a typical luxury car depreciation curve. It lost 20% of its value in the first year, 10% annually for the next four years, and then depreciated at a slower rate of 5% per year. By 2024, the Roadster's value had dropped to under $40,000, representing a decline of over 63% from its original price, as illustrated in @tbl-roadster. While the Roadster was a symbol of technological innovation, its financial performance exemplifies the inevitable depreciation of luxury vehicles. This stark contrast highlights the significant disparity in wealth accumulation between an appreciating asset like Tesla stock and a depreciating asset like the car.
+
+```{r message=FALSE, warning=FALSE}
+#| label: tbl-roadster
+#| tbl-cap: This graph illustrates the depreciation of the Tesla Roadster from its initial value of $109,000 in 2010 to $44,269 by 2024, showing a steady decline in value over time.
 
 kableExtra::kable(highlighted_points, format = "html", caption = "Tesla Roadster Value Depreciation Over Time") %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
@@ -168,7 +178,9 @@ kableExtra::kable(highlighted_points, format = "html", caption = "Tesla Roadster
 
 ### Conclusion
 
-This analysis underscores the stark difference between the financial outcomes of investing in a high-growth company like Tesla and purchasing a luxury asset like the Roadster. While the Roadster provided short-term prestige, it depreciated over time. In contrast, the Tesla stock investment yielded life-changing returns, illustrating the long-term financial benefits of investing in innovative, future-focused companies. In a rapidly evolving technological landscape, betting on disruptive innovation is not only a growth strategy but also a pathway to generational wealth. The takeaway is clear: patience, foresight, and embracing emerging technologies can lead to extraordinary rewards. 
+This analysis highlights the stark financial contrast between investing in Tesla stock and purchasing a Tesla Roadster, directly addressing the initial question. While the Roadster, as a luxury asset, provided short-term prestige, it depreciated by over 60% from its original value within 14 years. In contrast, Tesla stock saw a remarkable growth of over 13,000%, turning a $109,000 investment in 2010 into $14.39 million by 2024.
+
+These findings underscore the long-term financial advantages of investing in disruptive, future-focused companies. Tesla stock exemplifies how innovation and technological advancements can yield extraordinary financial returns. Meanwhile, the Roadster’s depreciation follows the predictable pattern seen with luxury goods. Ultimately, this comparison emphasizes that patience, foresight, and a focus on emerging technologies can significantly enhance wealth-building potential over time.
 
 ### References
 

@@ -29,5 +29,4 @@ format:
     toc-location: left
     css: styles.css # Add your custom styles here
     code-fold: true # Allows code blocks to be collapsible
-    smooth-scroll: true # Smooth scrolling for a more polished user experience
-    favicon: favicon.ico # Adds a favicon (optional but recommended)
+
