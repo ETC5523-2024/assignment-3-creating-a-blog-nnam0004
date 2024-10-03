@@ -2,16 +2,32 @@ project:
   type: website
 
 website:
-  title: "blog-template"
+  title: "My Business Analytics Journey"
   navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About Me"
+        href: about.qmd
+      - text: "Blog"
+        href: blog.qmd
     right:
-      - about.qmd
       - icon: github
-        href: https://github.com/etc5523-2022
+        text: "GitHub"
+        href: https://github.com/nnam0004
+      - icon: linkedin
+        text: "LinkedIn"
+        href: https://www.linkedin.com/in/naharnamdhari
+      - icon: envelope
+        text: "Email"
+        href: mailto:nnam0004@student.monash.edu
+
 format:
   html:
-    theme: cosmo
-    css: styles.css
-
-
-
+    theme: lumen # Choose from options like "minty", "flatly", "cosmo", etc.
+    toc: true # Adds a table of contents to your pages
+    toc-location: left
+    css: styles.css # Add your custom styles here
+    code-fold: true # Allows code blocks to be collapsible
+    smooth-scroll: true # Smooth scrolling for a more polished user experience
+    favicon: favicon.ico # Adds a favicon (optional but recommended)

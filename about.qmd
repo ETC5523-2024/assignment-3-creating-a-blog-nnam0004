@@ -1,13 +1,32 @@
 ---
-title: "About"
-image: profile.jpg
+title: "About Me"
+image: profile.jpg # Ensure you have a profile picture saved as "profile.jpg" in your project folder
 about:
   template: jolla
   links:
     - icon: github
-      text: Github
-      href: https://github.com/etc5523-2022
-
+      text: GitHub
+      href: https://github.com/nnam0004 # Replace with your actual GitHub profile link
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/naharnamdhari # Add your LinkedIn profile link
+    - icon: envelope
+      text: Email
+      href: mailto:nnam0004@student.monash.edu # Optional: Add your email
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+## Nahar Singh Namdhari
+
+I am currently studying Business Analytics at Monash University and am passionate about leveraging data-driven insights to solve complex problems across industries. My academic background, coupled with hands-on experience in finance and supply chain management, allows me to bring a unique blend of strategic and analytical thinking to projects.
+
+### Key Interests:
+- **Corporate Finance and Investment Banking**: Applying analytical skills to optimize financial decisions.
+- **Supply Chain Analytics**: Enhancing operational efficiency through data-driven insights.
+- **Open Data & Historical Analysis**: Advocating for re-use of datasets while preserving privacy.
+- **Cross-Industry Data Application**: Bringing data solutions to various sectors, from finance to sports.
+
+I am eager to collaborate on high-impact projects and always open to discussing new ideas where data can make a significant difference.
+
+Feel free to connect with me via the links above!
+
+
