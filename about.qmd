@@ -1,32 +1,33 @@
 ---
 title: "About Me"
-image: profile.jpg # Ensure you have a profile picture saved as "profile.jpg" in your project folder
+image: profile.jpg
 about:
   template: jolla
   links:
     - icon: github
       text: GitHub
-      href: https://github.com/nnam0004 # Replace with your actual GitHub profile link
+      href: https://github.com/nnam0004 
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/naharnamdhari # Add your LinkedIn profile link
+      href: https://www.linkedin.com/in/naharnamdhari 
     - icon: envelope
       text: Email
-      href: mailto:nnam0004@student.monash.edu # Optional: Add your email
+      href: mailto:nnam0004@student.monash.edu 
 ---
 
 ## Nahar Singh Namdhari
 
-I am currently studying Business Analytics at Monash University and am passionate about leveraging data-driven insights to solve complex problems across industries. My academic background, coupled with hands-on experience in finance and supply chain management, allows me to bring a unique blend of strategic and analytical thinking to projects.
+I am currently pursuing a degree in Business Analytics at Monash University, with a deep passion for leveraging data-driven insights to address complex challenges across industries. My academic foundation, along with hands-on experience at Bank of America, where I worked in treasury services, finance, and operations, has honed my ability to think strategically and analytically. At Bank of America, I played a key role in data-driven decision-making, which further fueled my interest in business analytics. I aim to bridge the gap between raw data and actionable insights to drive innovation and impactful outcomes in the business world.
 
 ### Key Interests:
-- **Corporate Finance and Investment Banking**: Applying analytical skills to optimize financial decisions.
-- **Supply Chain Analytics**: Enhancing operational efficiency through data-driven insights.
-- **Open Data & Historical Analysis**: Advocating for re-use of datasets while preserving privacy.
-- **Cross-Industry Data Application**: Bringing data solutions to various sectors, from finance to sports.
+
+- **Corporate Finance and Investment Banking**: Utilizing analytical expertise to optimize financial decisions and strategies, particularly in high-stakes environments.
+
+- **Open Data & Historical Analysis**: Advocating for the re-use of datasets, ensuring data privacy while promoting transparent and impactful analysis.
+
+- **Cross-Industry Data Application**: Applying data solutions across diverse sectors, from finance to academia, to solve complex, real-world challenges.
+
 
 I am eager to collaborate on high-impact projects and always open to discussing new ideas where data can make a significant difference.
-
-Feel free to connect with me via the links above!
 
 
