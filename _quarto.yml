@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "My Business Analytics Journey"
@@ -13,20 +14,24 @@ website:
         href: blog.qmd
     right:
       - icon: github
-        text: "GitHub"
         href: https://github.com/nnam0004
       - icon: linkedin
-        text: "LinkedIn"
         href: https://www.linkedin.com/in/naharnamdhari
       - icon: envelope
-        text: "Email"
         href: mailto:nnam0004@student.monash.edu
 
 format:
   html:
-    theme: lumen # Choose from options like "minty", "flatly", "cosmo", etc.
-    toc: true # Adds a table of contents to your pages
-    toc-location: left
-    css: styles.css # Add your custom styles here
-    code-fold: true # Allows code blocks to be collapsible
+    theme: sandstone # You can choose from "minty", "flatly", "cosmo", "yeti", etc. to suit your style.
+    mainfont: Arial, sans-serif # Arial is standard; you can add fallbacks like sans-serif for better compatibility.
+    backgroundcolor: "#ffffff" # Hex code for white; you can customize if needed.
+    color: "#00a400" # Custom green color for text or headers; adjust as needed.
+    toc: true # Enable table of contents for easier navigation.
+    toc-location: left # Position of the TOC (left or right).
+    css: styles.css # Path to your custom CSS file for further styling.
+    code-fold: true # Enable collapsible code blocks for a cleaner look.
+    smooth-scroll: true # Add smooth scrolling to enhance user experience.
+    highlight-style: github # Syntax highlighting theme for code blocks (choose from options like "tango", "monokai", etc.).
+    search: true # Enable search functionality on the site.
+
 
