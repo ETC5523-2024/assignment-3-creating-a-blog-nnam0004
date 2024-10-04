@@ -1,4 +1,13 @@
 /* css styles */
 .navbar-dark, .quarto-title-banner {
-  background-color: #006DAE;
+  background-color: #31373d;
+}
+
+body {
+  background-color: #c8d4db;
+  font-family: "Arial", Sans-Serif;
+}
+
+h3.anchored {
+  color: #31373d;
 }

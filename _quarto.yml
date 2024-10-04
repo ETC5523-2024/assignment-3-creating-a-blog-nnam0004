@@ -6,10 +6,8 @@ website:
   title: "My Business Analytics Journey"
   navbar:
     left:
-      - text: "Home"
-        href: index.qmd
       - text: "About Me"
-        href: about.qmd
+        href: index.qmd
       - text: "Blog"
         href: blog.qmd
     right:
@@ -23,15 +21,5 @@ website:
 format:
   html:
     theme: sandstone # You can choose from "minty", "flatly", "cosmo", "yeti", etc. to suit your style.
-    mainfont: Arial, sans-serif # Arial is standard; you can add fallbacks like sans-serif for better compatibility.
-    backgroundcolor: "#ffffff" # Hex code for white; you can customize if needed.
-    color: "#00a400" # Custom green color for text or headers; adjust as needed.
-    toc: true # Enable table of contents for easier navigation.
-    toc-location: left # Position of the TOC (left or right).
     css: styles.css # Path to your custom CSS file for further styling.
-    code-fold: true # Enable collapsible code blocks for a cleaner look.
-    smooth-scroll: true # Add smooth scrolling to enhance user experience.
-    highlight-style: github # Syntax highlighting theme for code blocks (choose from options like "tango", "monokai", etc.).
-    search: true # Enable search functionality on the site.
-
 
