@@ -1,8 +1,8 @@
 ---
-title: "About Me"
+title: "Nahar Singh Namdhari"
 image: profile.jpg
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: github
       text: GitHub
@@ -15,7 +15,7 @@ about:
       href: mailto:nnam0004@student.monash.edu 
 ---
 
-## Nahar Singh Namdhari
+## About Me 
 
 I am currently pursuing a degree in Business Analytics at Monash University, with a deep passion for leveraging data-driven insights to address complex challenges across industries. My academic foundation, along with hands-on experience at Bank of America, where I worked in treasury services, finance, and operations, has honed my ability to think strategically and analytically. At Bank of America, I played a key role in data-driven decision-making, which further fueled my interest in business analytics. I aim to bridge the gap between raw data and actionable insights to drive innovation and impactful outcomes in the business world.
 
