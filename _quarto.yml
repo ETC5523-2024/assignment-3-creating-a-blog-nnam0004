@@ -20,6 +20,6 @@ website:
 
 format:
   html:
-    theme: sandstone # You can choose from "minty", "flatly", "cosmo", "yeti", etc. to suit your style.
-    css: styles.css # Path to your custom CSS file for further styling.
+    theme: sandstone
+    css: styles.css
 
