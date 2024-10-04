@@ -12,13 +12,10 @@ format:
 
 ## Tesla Stock in 2010 vs. Tesla Car: Which Was the Smarter Investment?
 
-### Executive Summary 
-
-In 2010, individuals faced a pivotal financial decision: invest $109,000 in the innovative yet risky Tesla stock or purchase the luxury car Tesla Roadster. By 2024, the outcomes are starkly different: while the Roadster depreciated to less than $40,000, Tesla's stock skyrocketed, transforming the same $109,000 into an astonishing $14.39 million. This analysis underscores the significant wealth-building potential of investing in disruptive technologies versus the predictable depreciation of luxury goods.
-
 ### Introduction
   
 In 2010, Tesla was a relatively unknown player in the automotive industry, having just launched its revolutionary but niche Tesla Roadster. At the time, many were skeptical about the company’s long-term viability, and Tesla's newly issued stock, following its IPO (Initial Public Offering), was considered a risky investment. The choice between purchasing an innovative electric vehicle or investing in Tesla’s future presented a clear financial dilemma: should one buy the luxury Tesla Roadster for instant enjoyment, or invest in the company’s ambitious future, despite the risks?
+
 
 ### Methods
 
@@ -48,7 +45,8 @@ The dataset consists of the following key variables:
 1. **Stock Investment Calculation**:  
 
 - The adjusted closing price of Tesla stock on June 30, 2010, was used to determine the number of shares that could be purchased with the initial $109,000. This amounted to approximately 28,385 shares. The value of this investment was then calculated annually based on the adjusted closing prices for each year, illustrating the exponential growth in value over the 14-year period (see @fig-tesla-stock).
-```{r message=FALSE, warning=FALSE}
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 # Load necessary libraries
 library(ggplot2)
 library(dplyr)
@@ -84,7 +82,7 @@ tesla_data <- tesla_data %>%
 
 - The Roadster’s initial purchase price of $109,000 in 2010 was subject to a 20% depreciation in the first year, followed by a 10% annual depreciation over the next four years. After this period, the depreciation slowed to 5% per year. By 2020, the car's value began to stabilize, showing a typical depreciation pattern for luxury vehicles over time (see @tbl-roadster).
 
-```{r message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 # Initial investment in Tesla Roadster
 initial_investment <- 109000
 
