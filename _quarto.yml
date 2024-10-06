@@ -6,11 +6,11 @@ website:
   title: "My Business Analytics Journey"
   navbar:
     left:
-      - text: "About Me"
-        href: index.qmd
       - text: "Blog"
         href: blog.qmd
     right:
+      - text: "About Me"
+        href: index.qmd
       - icon: github
         href: https://github.com/nnam0004
       - icon: linkedin

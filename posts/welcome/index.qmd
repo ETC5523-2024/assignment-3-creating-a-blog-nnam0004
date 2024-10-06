@@ -9,16 +9,15 @@ format:
     code-fold: true
 ---
 
+### Thinking Box
 
-## Tesla Stock in 2010 vs. Tesla Car: Which Was the Smarter Investment?
-
-What if you had $109,000 in 2010—would you splurge on Tesla’s sleek, high-tech Roadster or bet on their uncertain future by buying their stock? A decade later, one of these choices would leave you cruising in style, while the other would propel you into the realm of millionaires. As Tesla transformed from a fledgling company into a global powerhouse, the financial outcomes of these two investments took wildly different paths. In this blog, we reveal which decision paved the way to financial success.
+What if you had $109,000 in 2010—would you splurge on Tesla’s sleek, high-tech Roadster, or take a chance and invest in their stock? Fast forward to today, and one choice has lost over half its value, while the other could have made you a millionaire. As Tesla went from an underdog to an industry titan, the financial outcomes of these two paths couldn't have been more different. In this blog, we'll dive into which decision came out on top.
 
 ### Introduction
   
-In 2010, Tesla was a relatively unknown player in the automotive industry, having just launched its revolutionary but niche Tesla Roadster. At the time, many were skeptical about the company’s long-term viability, and Tesla's newly issued stock, following its IPO (Initial Public Offering), was considered a risky investment. The choice between purchasing an innovative electric vehicle or investing in Tesla’s future presented a clear financial dilemma: should one buy the luxury Tesla Roadster for instant enjoyment, or invest in the company’s ambitious future, despite the risks?
+In 2010, Tesla was a relatively new and niche player in the automotive world, having just launched its first electric vehicle, the Tesla Roadster. At the time, the company faced skepticism about its long-term prospects, with many questioning its viability in an industry dominated by traditional automakers. Meanwhile, Tesla's stock had just been made available through its IPO, seen as a high-risk gamble. This raised a compelling financial question: should you invest in a luxury, innovative car for immediate satisfaction, or take a risk and bet on Tesla's vision for the future?
 
-### Data Description 
+### Let's Introduce the data 
 
 #### Data Source
 
@@ -41,7 +40,7 @@ The dataset consists of the following key variables:
 
 - **Shares_Purchased**: The number of Tesla shares that could be bought with $109,000 in 2010.
 
-#### Data Cleaning Steps
+#### Data Cleaning and Preparation Steps
 
 ##### **Stock Investment Calculation :**
 
@@ -137,7 +136,7 @@ highlighted_points <- roadster_data %>%
   filter(Date %in% as.Date(c("2010-06-30", "2015-06-30", "2020-06-30", "2024-07-01")))
 ```
 
-### Analysis
+### Comparative Analysis: Tesla Stock vs. Tesla Roadster
 
 #### ***Tesla Stock Investment***
 
@@ -160,6 +159,8 @@ ggplot(tesla_data, aes(x = Date, y = Investment_Value)) +
        x = "Year") +
   theme_bw(base_size = 12) +  # Use a minimal theme with base font size 12
   theme(
+    panel.background = element_rect(fill = "#c8d4db"), 
+    plot.background = element_rect(fill = "#c8d4db", color = NA),
     plot.title = element_text(size = 12, face = "bold", hjust = 0.5, color = "#2C3E50"),  # Adjusted title size
     axis.title = element_text(size = 10, face = "bold", color = "#2C3E50"),  # Darker axis titles
     axis.text = element_text(size = 10, color = "#2C3E50"),  # Darker axis text
@@ -173,7 +174,7 @@ ggplot(tesla_data, aes(x = Date, y = Investment_Value)) +
 
 #### ***Tesla Roadster Investment***
 
-In contrast, the Tesla Roadster, purchased for $109,000 in 2010, followed a typical luxury car depreciation curve. It lost 20% of its value in the first year, 10% annually for the next four years, and then depreciated at a slower rate of 5% per year. By 2024, the Roadster's value had dropped to under $40,000, representing a decline of over 63% from its original price, as illustrated in @tbl-roadster. While the Roadster was a symbol of technological innovation, its financial performance exemplifies the inevitable depreciation of luxury vehicles. This stark contrast highlights the significant disparity in wealth accumulation between an appreciating asset like Tesla stock and a depreciating asset like the car.
+In contrast, the Tesla Roadster, purchased for $109,000 in 2010, followed a typical luxury car depreciation curve. It lost 20% of its value in the first year, 10% annually for the next four years, and then depreciated at a slower rate of 5% per year. By 2024, the Roadster's value had dropped to under $50,000, representing a decline of over 63% from its original price, as illustrated in @tbl-roadster. While the Roadster was a symbol of technological innovation, its financial performance exemplifies the inevitable depreciation of luxury vehicles. This stark contrast highlights the significant disparity in wealth accumulation between an appreciating asset like Tesla stock and a depreciating asset like the car.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 #| label: tbl-roadster
@@ -189,7 +190,7 @@ kableExtra::kable(highlighted_points, format = "html", caption = "Tesla Roadster
 
 ### Conclusion
 
-This analysis highlights the stark financial contrast between investing in Tesla stock and purchasing a Tesla Roadster, clearly addressing the initial financial dilemma posed. While the Tesla Roadster, as a luxury asset, provided immediate enjoyment and prestige, it depreciated by over 60% from its original value within 14 years. On the other hand, Tesla stock, driven by the company’s innovative advancements and market growth, soared by over 13,000%, transforming a $109,000 investment in 2010 into an astonishing $14.39 million by 2024.
+This comparison shows just how different the financial outcomes of these two choices were. While buying the Roadster gave you the thrill of driving a luxury car, it lost more than 60% of its value in 14 years. Meanwhile, Tesla stock skyrocketed, growing by over 13,000% and turning a $109,000 investment into $14.39 million. The lesson? Investing in bold, future-focused companies like Tesla can pay off in ways that go far beyond any luxury car."
 
 These findings underscore the long-term financial benefits of investing in disruptive, future-focused companies like Tesla. The stock’s impressive returns demonstrate how embracing innovation can yield extraordinary financial rewards over time, especially for patient investors willing to take calculated risks. In contrast, the Roadster’s depreciation aligns with the predictable decline typical of luxury goods. Ultimately, this comparison emphasizes that strategic investments in emerging technologies not only offer significant wealth-building potential but also reflect the broader power of innovation in transforming industries.
 

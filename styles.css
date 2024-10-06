@@ -8,6 +8,14 @@ body {
   font-family: "Arial", Sans-Serif;
 }
 
+h1.anchored {
+  color: #465361;
+}
+
+h2.anchored {
+  color: #283440;
+}
+
 h3.anchored {
   color: #31373d;
 }
