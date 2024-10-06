@@ -13,17 +13,31 @@ about:
     - icon: envelope
       text: Email
       href: mailto:nnam0004@student.monash.edu 
+      id: ppc 
 ---
 
-## About Me 
+:::{#ppc}
+
+### About Me 
 
 I am currently pursuing a degree in Business Analytics at Monash University, with a deep passion for leveraging data-driven insights to address complex challenges across industries. My academic foundation, along with hands-on experience at Bank of America, where I worked in treasury services, finance, and operations, has honed my ability to think strategically and analytically. At Bank of America, I played a key role in data-driven decision-making, which further fueled my interest in business analytics. I aim to bridge the gap between raw data and actionable insights to drive innovation and impactful outcomes in the business world.
 
-### Key Interests:
+### Interests
 
-- **Corporate Finance and Investment Banking**: Utilizing analytical expertise to optimize financial decisions and strategies, particularly in high-stakes environments.
+1. Financial Markets  
+2. Cricket Analysis  
+3. Investment Strategies
 
-- **Open Data & Historical Analysis**: Advocating for the re-use of datasets, ensuring data privacy while promoting transparent and impactful analysis.
+:::
 
-- **Cross-Industry Data Application**: Applying data solutions across diverse sectors, from finance to academia, to solve complex, real-world challenges.
+<div class="skills-education" style="display: flex; justify-content: space-between;">
 
+<div style="flex: 1; padding-right: 20px;">
+
+### Technical Skills
+
+- R Studio
+- SQL
+- MS Office 
+
+</div>
