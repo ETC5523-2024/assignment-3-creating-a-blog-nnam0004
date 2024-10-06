@@ -1,5 +1,5 @@
 ---
-title: "ETC5523 Blog Assessment"
+title: "Roadster to Riches: Tesla's Financial Evolution"
 listing:
   contents: posts
   sort: "date desc"
