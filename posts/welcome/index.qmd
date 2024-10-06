@@ -38,7 +38,7 @@ The dataset consists of the following key variables:
 
 - **Investment_Value**: The changing value of a $109,000 investment in Tesla stock or the depreciation of the Tesla Roadster over time.
 
-- **Shares_Purchased**: The number of Tesla shares that could be bought with $109,000 in 2010.
+- **Shares_Purchased**: The number of Tesla shares that could be bought with $109,000 in 2010 .
 
 #### Data Cleaning and Preparation Steps
 

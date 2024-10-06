@@ -1,5 +1,10 @@
 /* css styles */
-.navbar-dark, .quarto-title-banner {
+
+.quarto-title-banner {
+  background-color: #283440;
+}
+
+.navbar {
   background-color: #31373d;
 }
 
@@ -16,10 +21,10 @@ h2.anchored {
   color: #283440;
 }
 
-h3.anchored {
-  color: #31373d;
-}
-
 h4.anchored {
   color: #151726;
+}
+
+h3{
+  color: #31373d;
 }

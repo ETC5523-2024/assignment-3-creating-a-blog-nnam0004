@@ -20,6 +20,5 @@ website:
 
 format:
   html:
-    theme: sandstone
     css: styles.css
 
