@@ -189,13 +189,13 @@ kableExtra::kable(highlighted_points, format = "html", caption = "Tesla Roadster
 
 ### Conclusion
 
-#### Roadster to Riches: Tesla's Financial Evolution
+#### **Roadster to Riches: Tesla's Financial Evolution**
 
 This comparison shows just how different the financial outcomes of these two choices were. While buying the Roadster gave you the thrill of driving a luxury car, it lost more than 60% of its value in 14 years. Meanwhile, Tesla stock skyrocketed, growing by over 13,000% and turning a \$109,000 investment into \$14.39 million. The lesson? Investing in bold, future-focused companies like Tesla can pay off in ways that go far beyond any luxury car.
 
 These findings underscore the long-term financial benefits of investing in disruptive, future-focused companies like Tesla. The stock’s impressive returns demonstrate how embracing innovation can yield extraordinary financial rewards over time, especially for patient investors willing to take calculated risks. In contrast, the Roadster’s depreciation aligns with the predictable decline typical of luxury goods. Ultimately, this comparison emphasizes that strategic investments in emerging technologies not only offer significant wealth-building potential but also reflect the broader power of innovation in transforming industries.
 
-#### References
+#### **References**
 
 -   **Gründl, H., M. Dong and J. Gal (2016), "The evolution of insurer portfolio investment strategies for long-term investing", OECD Journal**: Financial Market Trends, vol. 2016/2, <https://doi.org/10.1787/fmt-2016-5jln3rh7qf46>.
 
